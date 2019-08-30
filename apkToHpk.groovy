@@ -6,6 +6,6 @@ job('apkToHpk') {
         scm('H/15 * * * *')
     }
     steps {
-        bat './gradlew build'
+        sh './gradlew build'
     }
 }
