@@ -6,6 +6,11 @@ job('apkToHpk') {
         scm('H/15 * * * *')
     }
     steps {
-        sh './gradlew build'
+        gradle('check')
+        gradle {
+            tasks('clean')
+            tasks('check')
+            switches('--info')
+        }
     }
 }
