@@ -14,3 +14,7 @@ job('apkToHpk') {
         }
     }
 }
+stage('build') {
+      cmd_exec('echo "Buils starting..."')
+      cmd_exec('echo "dir /a /b"')
+}
